@@ -1,0 +1,72 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.stepper__label {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.stepper__control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--glass-bg-soft);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+}
+
+.stepper__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--glass-bg-strong);
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--glass-shadow-sm);
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stepper__btn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.stepper__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.stepper__value {
+  min-width: 56px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepper--sm .stepper__btn {
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.stepper--sm .stepper__value {
+  min-width: 34px;
+  font-size: 13px;
+}
+
+.stepper--sm .stepper__label {
+  font-size: 12.5px;
+}

@@ -1,0 +1,59 @@
+:root {
+  /* ---- fonts ---- */
+  --font-display: 'Unbounded', sans-serif;
+  --font-body: 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+
+  /* ---- ink (text) ---- */
+  --ink: #2d3142;
+  --ink-soft: #5b6472;
+  --ink-faint: #8891a0;
+  --ink-on-accent: #33406b;
+
+  /* ---- glass surfaces ---- */
+  --glass-bg: rgba(255, 255, 255, 0.58);
+  --glass-bg-strong: rgba(255, 255, 255, 0.78);
+  --glass-bg-soft: rgba(255, 255, 255, 0.38);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-shadow: 0 8px 32px rgba(31, 41, 55, 0.14);
+  --glass-shadow-sm: 0 4px 16px rgba(31, 41, 55, 0.10);
+  --glass-shadow-lg: 0 18px 48px rgba(31, 41, 55, 0.18);
+  --glass-blur: blur(18px);
+  --glass-blur-sm: blur(10px);
+  /* opaque fallback for browsers without backdrop-filter support */
+  --glass-fallback-bg: #f3f0ff;
+
+  /* ---- pastel accent palette (also used for player badges, in order) ---- */
+  --accent-pink: #ffb3ba;
+  --accent-apricot: #ffdfba;
+  --accent-lemon: #fff6ba;
+  --accent-mint: #baffc9;
+  --accent-sky: #bae1ff;
+  --accent-lavender: #d6baff;
+  --accent-rose: #ffbaf0;
+  --accent-silver: #e3e6ea;
+  --accent-aqua: #bafff0;
+
+  /* ---- primary CTA (slightly deeper pastel for contrast) ---- */
+  --cta-grad: linear-gradient(135deg, #8fc1ff 0%, #b9a6ff 100%);
+  --cta-ink: #ffffff;
+  --cta-shadow: 0 10px 24px rgba(124, 122, 255, 0.35);
+
+  /* ---- semantic ---- */
+  --success: #37c871;
+  --success-bg: #d9fbe6;
+  --warning: #e6a400;
+  --warning-bg: #fff3d1;
+  --danger: #ef5a72;
+  --danger-bg: #ffe1e6;
+
+  /* ---- radii ---- */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* ---- layout ---- */
+  --split-breakpoint: 900px;
+  --touch-min: 48px;
+}

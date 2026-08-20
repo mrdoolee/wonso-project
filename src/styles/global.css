@@ -1,0 +1,160 @@
+@import './tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: #f4f2ff;
+  overflow-x: hidden;
+}
+
+/* ---- dreamy pastel backdrop (fixed, sits behind everything) ---- */
+.app-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #ffe5ec 0%, #fff6e5 25%, #e8f9f0 50%, #e5f3ff 75%, #f1e9ff 100%);
+  overflow: hidden;
+}
+
+.app-backdrop::before,
+.app-backdrop::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+}
+
+.app-backdrop::before {
+  width: 46vmax;
+  height: 46vmax;
+  top: -12vmax;
+  left: -10vmax;
+  background: radial-gradient(circle, #ffd1e3 0%, transparent 70%);
+  animation: drift-a 26s ease-in-out infinite alternate;
+}
+
+.app-backdrop::after {
+  width: 52vmax;
+  height: 52vmax;
+  bottom: -18vmax;
+  right: -14vmax;
+  background: radial-gradient(circle, #cfe8ff 0%, transparent 70%);
+  animation: drift-b 30s ease-in-out infinite alternate;
+}
+
+@keyframes drift-a {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(4vmax, 3vmax) scale(1.08); }
+}
+
+@keyframes drift-b {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-3vmax, -4vmax) scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-backdrop::before,
+  .app-backdrop::after {
+    animation: none;
+  }
+}
+
+h1, h2, h3, h4, p, ul, ol {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ---- glass panel primitive ---- */
+.glass-panel {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-panel {
+    background: var(--glass-fallback-bg);
+  }
+}
+
+.glass-panel--soft {
+  background: var(--glass-bg-soft);
+  box-shadow: var(--glass-shadow-sm);
+}
+
+.glass-panel--strong {
+  background: var(--glass-bg-strong);
+}
+
+/* ---- buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--touch-min);
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg-strong);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+  box-shadow: var(--glass-shadow-sm);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  filter: brightness(1.03);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--primary, #7c9eff);
+  outline-offset: 2px;
+}
+
+.btn--primary {
+  background: var(--cta-grad);
+  color: var(--cta-ink);
+  border-color: transparent;
+  box-shadow: var(--cta-shadow);
+}
+
+.btn--ghost {
+  background: transparent;
+  box-shadow: none;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}

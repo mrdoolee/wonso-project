@@ -1,0 +1,95 @@
+.scoreboard {
+  padding: 18px 20px;
+}
+
+.scoreboard__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.scoreboard__title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.scoreboard__hint {
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+.scoreboard__table-wrap {
+  overflow-x: auto;
+}
+
+.scoreboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 420px;
+}
+
+.scoreboard__table th,
+.scoreboard__table td {
+  padding: 8px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.scoreboard__table th {
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  border-bottom: 2px solid var(--glass-border);
+}
+
+.scoreboard__table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.scoreboard__table td:nth-child(2) {
+  text-align: left;
+  font-family: var(--font-body);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.scoreboard__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.scoreboard__rank {
+  font-size: 15px;
+}
+
+.scoreboard__total {
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.scoreboard__row--winner td {
+  background: var(--success-bg);
+}
+
+.scoreboard__row--winner .scoreboard__total {
+  color: var(--success);
+}
+
+.scoreboard__winner-banner {
+  margin-top: 14px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--ink);
+}
