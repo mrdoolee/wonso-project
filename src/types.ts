@@ -39,3 +39,13 @@ export const PLAYER_PASTELS = [
   '#BAE1FF', // 스카이블루
   '#D6BAFF', // 라벤더
 ] as const
+
+/** 이름을 비워두면 채워지는 예시 이름 — 유명 화학자들 */
+export const CHEMIST_NAMES = [
+  '마리 퀴리',
+  '드미트리 멘델레예프',
+  '앙투안 라부아지에',
+  '로버트 보일',
+  '라이너스 폴링',
+  '글렌 시보그',
+] as const

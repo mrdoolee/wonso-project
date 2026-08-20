@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Stepper from '../../components/Stepper'
-import { MAX_PLAYERS, MAX_ROUNDS, MIN_PLAYERS, MIN_ROUNDS, PLAYER_PASTELS } from '../../types'
+import { CHEMIST_NAMES, MAX_PLAYERS, MAX_ROUNDS, MIN_PLAYERS, MIN_ROUNDS, PLAYER_PASTELS } from '../../types'
 import { useGame } from './GameContext'
 import './SetupPanel.css'
 
@@ -29,7 +29,7 @@ export function useSetupPanel() {
   function handleStart() {
     const players = Array.from({ length: draft.playerCount }, (_, i) => ({
       id: `p${i + 1}`,
-      name: draft.names[i]?.trim() || `플레이어 ${i + 1}`,
+      name: draft.names[i]?.trim() || CHEMIST_NAMES[i],
     }))
     dispatch({ type: 'START_GAME', players, totalRounds: draft.totalRounds })
   }
@@ -63,7 +63,7 @@ export function useSetupPanel() {
             key={i}
             type="text"
             className="setup-panel__name-input"
-            placeholder={`플레이어 ${i + 1}`}
+            placeholder={CHEMIST_NAMES[i]}
             value={draft.names[i] ?? ''}
             maxLength={12}
             onChange={(e) => setName(i, e.target.value)}
@@ -84,7 +84,7 @@ export function useSetupPanel() {
       <div className="setup-preview__chips">
         {Array.from({ length: draft.playerCount }, (_, i) => (
           <div key={i} className="setup-preview__chip" style={{ background: PLAYER_PASTELS[i] }}>
-            {draft.names[i]?.trim() || `플레이어 ${i + 1}`}
+            {draft.names[i]?.trim() || CHEMIST_NAMES[i]}
           </div>
         ))}
       </div>

@@ -360,20 +360,6 @@
   font-size: 12.5px !important;
 }
 
-.rb-footer {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 4px;
-  font-size: 10.5px;
-  color: #9aa4ab;
-}
-
-.rb-copyright {
-  text-align: center;
-  font-size: 10px;
-  color: #b7bec4;
-}
 
 @media (max-width: 640px) {
   .rb-cols,

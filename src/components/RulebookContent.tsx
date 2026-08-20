@@ -220,12 +220,6 @@ export default function RulebookContent() {
           </p>
         </div>
       </div>
-
-      <div className="rb-footer">
-        <span>Chp4. 물질의 구성 — 주기율표 보드게임</span>
-        <span>WoNsO 공식 룰 요약본</span>
-      </div>
-      <div className="rb-copyright">© 2026 Designed &amp; Developed by 두리쌤. All rights reserved.</div>
     </div>
   )
 }
