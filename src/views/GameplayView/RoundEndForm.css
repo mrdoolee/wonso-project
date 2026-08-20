@@ -17,17 +17,16 @@
   line-height: 1.6;
 }
 
-.round-end-controls__actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 6px;
-}
-
 .round-end-rows {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.round-end-submit {
+  margin-top: 8px;
+  min-height: 64px;
+  font-size: 17px;
 }
 
 .round-end-row {

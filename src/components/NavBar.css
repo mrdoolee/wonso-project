@@ -6,7 +6,6 @@
   max-width: 1180px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
   padding: 10px 18px;
 }
@@ -32,69 +31,9 @@
   color: var(--ink-soft);
 }
 
-.navbar__tabs {
-  display: flex;
-  gap: 6px;
-  background: var(--glass-bg-soft);
-  border-radius: var(--radius-pill);
-  padding: 4px;
-}
-
-.navbar__tab {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 40px;
-  padding: 8px 14px;
-  border: none;
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: var(--ink-soft);
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.navbar__tab:hover {
-  color: var(--ink);
-}
-
-.navbar__tab:active {
-  transform: scale(0.96);
-}
-
-.navbar__tab--active {
-  background: var(--cta-grad);
-  color: var(--cta-ink);
-  box-shadow: var(--glass-shadow-sm);
-}
-
-.navbar__tab-icon {
-  font-size: 16px;
-  line-height: 1;
-}
-
 @media (max-width: 560px) {
   .navbar {
     top: 8px;
     padding: 8px 12px;
-  }
-
-  .navbar__logo-accent {
-    display: none;
-  }
-
-  .navbar__tab-label {
-    display: none;
-  }
-
-  .navbar__tab {
-    padding: 8px 12px;
-  }
-
-  .navbar__tab-icon {
-    font-size: 18px;
   }
 }

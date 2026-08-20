@@ -39,20 +39,16 @@ export function useRoundEndForm() {
     <div className="round-end-controls">
       <h2 className="round-end-controls__title">라운드 {state.currentRound} 결과 입력</h2>
       <p className="round-end-controls__hint">
-        각 플레이어의 손에 남은 카드 수를 입력하면 오른쪽에서 라운드 점수가 자동으로 계산됩니다.
+        각 플레이어의 손에 남은 카드 수를 입력하면 아래에서 라운드 점수가 자동으로 계산됩니다. 맨 아래
+        플레이어까지 입력한 뒤 하단의 확정 버튼을 눌러주세요.
       </p>
-      <div className="round-end-controls__actions">
-        <button type="button" className="btn btn--ghost" onClick={handleCancel}>
-          ← 취소
-        </button>
-        <button type="button" className="btn btn--primary btn--block" onClick={handleSubmit}>
-          ✅ 확정하고 다음으로
-        </button>
-      </div>
+      <button type="button" className="btn btn--ghost" onClick={handleCancel}>
+        ← 취소
+      </button>
     </div>
   )
 
-  const simulationNode = (
+  const mainNode = (
     <div className="round-end-rows">
       {state.players.map((player, i) => {
         const counts = draft[player.id] ?? { elementCards: 0, actionCards: 0 }
@@ -96,8 +92,11 @@ export function useRoundEndForm() {
           </div>
         )
       })}
+      <button type="button" className="btn btn--primary btn--block round-end-submit" onClick={handleSubmit}>
+        ✅ 확정하고 다음으로
+      </button>
     </div>
   )
 
-  return { controlNode, simulationNode }
+  return { controlNode, mainNode }
 }

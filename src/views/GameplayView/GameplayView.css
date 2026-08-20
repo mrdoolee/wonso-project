@@ -1,17 +1,33 @@
 .gameplay-view {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gp-top {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gp-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .playing-controls {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
 .playing-controls__round {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: baseline;
+  gap: 10px;
 }
 
 .playing-controls__round-label {
@@ -40,4 +56,15 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--ink);
+}
+
+.playing-controls__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.playing-controls__actions .btn {
+  flex: 1 1 auto;
+  min-width: 140px;
 }

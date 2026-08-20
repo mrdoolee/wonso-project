@@ -149,6 +149,12 @@ button {
   box-shadow: none;
 }
 
+.btn--danger {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: transparent;
+}
+
 .btn--block {
   width: 100%;
 }
