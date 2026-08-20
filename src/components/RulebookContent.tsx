@@ -1,7 +1,7 @@
 import './RulebookContent.css'
 
 /**
- * 룰북 본문. RulebookModal 안에서 표시된다.
+ * 룰북 본문. 룰북 페이지(RulebookView)와 게임플레이 중 여는 모달(RulebookModal) 양쪽에서 재사용한다.
  * 실제 카드 색을 정확히 보여줘야 하므로 앱의 파스텔 UI 톤과는 별개로 원색 팔레트를 사용한다.
  */
 export default function RulebookContent() {
