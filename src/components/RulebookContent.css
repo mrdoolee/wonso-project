@@ -73,6 +73,18 @@
   min-width: 76px;
 }
 
+.rb-badge--single {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rb-badge--single .rb-badge__num {
+  font-family: var(--font-body);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
 .rb-badge__num {
   font-family: var(--font-mono);
   font-size: 16px;

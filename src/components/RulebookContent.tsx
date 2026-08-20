@@ -19,15 +19,14 @@ export default function RulebookContent() {
         <div className="rb-header__badges">
           <div className="rb-badge">
             <span className="rb-badge__num">2~6</span>
-            <span className="rb-badge__lbl">인원 (최대10)</span>
+            <span className="rb-badge__lbl">인원</span>
           </div>
           <div className="rb-badge">
             <span className="rb-badge__num">15~25</span>
             <span className="rb-badge__lbl">분 소요</span>
           </div>
-          <div className="rb-badge">
-            <span className="rb-badge__num">3R</span>
-            <span className="rb-badge__lbl">최저 점수 승리</span>
+          <div className="rb-badge rb-badge--single">
+            <span className="rb-badge__num">최저 점수 승리</span>
           </div>
         </div>
       </div>
