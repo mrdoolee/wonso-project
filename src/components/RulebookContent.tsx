@@ -215,7 +215,7 @@ export default function RulebookContent() {
             </div>
           </div>
           <p className="rb-final__foot">
-            <b>3라운드</b> 동안 진행 후 점수를 합산하여, <b>가장 낮은 점수</b>를 받은 사람이 최종
+            <b>모든 라운드</b>를 마친 후 점수를 합산하여, <b>가장 낮은 점수</b>를 받은 사람이 최종
             승리합니다!
           </p>
         </div>
