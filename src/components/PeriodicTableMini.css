@@ -21,7 +21,13 @@
 
 .pt-scroll {
   overflow-x: auto;
-  padding-bottom: 2px;
+  overflow-y: hidden;
+  /* padding + negative margin: gives hovered/active cells room to scale up
+     without pushing the scrollable content area, which otherwise made a
+     scrollbar pop in/out (and the page jump) right at the grid's edges —
+     18족(마지막 열), 7주기/악티늄족(마지막 행) */
+  padding: 10px;
+  margin: -10px -10px -8px;
 }
 
 .pt-grid {
