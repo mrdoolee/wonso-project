@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Stepper from '../../components/Stepper'
 import { PLAYER_PASTELS } from '../../types'
 import { computeRoundScore } from './gameEngine'
@@ -19,6 +19,16 @@ export function useRoundEndForm() {
     for (const p of state.players) initial[p.id] = { elementCards: 0, actionCards: 0 }
     return initial
   })
+
+  // 이 훅은 게임 내내 마운트된 상태로 유지되므로(라운드가 바뀌어도 언마운트되지 않음),
+  // 라운드가 넘어갈 때마다 직접 0으로 되돌려주지 않으면 이전 라운드에 입력했던
+  // 카드 수가 다음 라운드 입력 화면에 그대로 남아있게 된다.
+  useEffect(() => {
+    const reset: Record<string, CardCounts> = {}
+    for (const p of state.players) reset[p.id] = { elementCards: 0, actionCards: 0 }
+    setDraft(reset)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.currentRound])
 
   function updateCount(playerId: string, key: keyof CardCounts, value: number) {
     setDraft((prev) => ({
